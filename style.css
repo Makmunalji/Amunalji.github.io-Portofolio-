@@ -1,0 +1,457 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+  position: fixed;
+  display: flex;
+  background-color: rgb(33, 125, 245);
+  justify-content: space-around;
+  padding: 20px 0;
+  box-sizing: border-box;
+  color: rgb(203, 221, 245);
+  width: 100vw;
+  margin-top: -200px;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-between;
+}
+nav ul li a{
+  text-decoration: none;
+  color:rgb(203, 221, 245) ;
+  font-size: 0.8em;
+}
+nav ul li a:hover{
+  color: rgb(8, 8, 8);
+}
+.logo h4 span.amun{
+  color: black;
+  font-weight: 900;
+  text-shadow: 1px 1px 0 rgba(252, 252, 252, 1),-1px -1px 0 rgba(252, 252, 252, 1);
+}
+.logo h4 span.alji{
+  color: rgb(255, 254, 254);
+  font-weight: 900;
+  text-shadow: 1px 1px 0 rgba(8, 8, 8,3),-1px -1px 0 rgba(7, 7, 7,3);
+}
+
+/* humburger menu */
+.menu-toggle{
+  display: none;
+  flex-direction: column;
+  height:20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle span{
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color:rgb(203, 221, 245);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+.menu-toggle input{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity:0;
+  top: -4px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* humburger menu animation */
+.menu-toggle span:nth-child(2){
+  transform-origin:  0 0;
+}
+.menu-toggle span:nth-child(4){
+  transform-origin:  0 0;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+  background-color:rgb(239, 239, 245);
+  opacity: 1;
+  transform: rotate(45deg)translate(-1px,-1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+  background-color: rgb(236, 236, 241);
+  opacity: 1;
+  transform: rotate(-45deg) translate(-1px,0);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+  opacity: 0;
+  transform: scale(0);
+}
+main{
+  margin:auto;
+}
+aside{
+  display: flex;
+  justify-content:space-around;
+  margin-top: 200px;
+}
+.Sidebar-satu h3{
+  padding-top: 3px;
+}
+.Sidebar-satu h3 b{
+  color: rgb(65, 62, 62);
+  text-shadow: 1px 1px 1px rgba(29, 28, 28, 0.5);
+}
+.Sidebar-satu h5{
+  color:rgb(13, 107, 230);
+  text-shadow: 1px 1px 0 rgba(53, 53, 65, 0.9);
+}
+.Sidebar-satu p.cita-cita{
+  font-size: 13px;
+  padding-top: 3px;
+}
+.Sidebar-satu p.cita-cita b{
+  color: rgb(105, 100, 100);
+}
+.Sidebar-satu p.teks{
+  padding-top: 20px;
+  font-size: 0.80em;
+}
+.Sidebar-satu a{
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(13, 107, 230);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 20px;
+  box-shadow: 2px 2px 3px rgba(29, 28, 28, 0.8);
+}
+.Sidebar-dua{
+  margin-left: -150px;
+}
+.Sidebar-dua .bg-img{
+  width: 270px;
+  height: 175px;
+  background-color: rgb(13, 107, 230);
+  border-top-right-radius: 175px;
+  border-top-left-radius: 175px;
+  margin-top: 10px;
+  border:1px solid rgb(26, 172, 172);
+  box-shadow: 2px 2px 3px rgb(75, 77, 77);
+}
+.Sidebar-dua .bg-img img{
+  width: 400px;
+  margin-top: -110px;
+  margin-left: 11px;
+}
+#content{
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.Artikel-satu{
+  flex: 1;
+  padding: 20px;
+  margin-left: 195px;
+}
+.Artikel-satu h5{
+  color:rgb(13, 107, 230);
+  text-shadow: 1px 1px 0 rgba(53, 53, 65, 0.9);
+}
+.Artikel-satu h3{
+  margin-top: 20px;
+  color:rgb(65, 62, 62);
+  text-shadow: 1px 1px 1px rgba(29, 28, 28, 0.5);
+}
+.Artikel-satu p{
+  width: 75%;
+  font-size: 0.80em;
+}
+.Artikel-dua{
+  flex: 1;
+  padding: 20px;
+}
+.Artikel-dua h4{
+  margin-top: 35px;
+  color:rgb(65, 62, 62);
+  text-shadow: 1px 1px 1px rgba(29, 28, 28, 0.5);
+}
+.Artikel-dua p{
+  width: 67%;
+  font-size: 0.80em;
+}
+a{
+  text-decoration: none;
+  margin-left: 5px;
+}
+.Artikel-dua a:hover{
+  color: white;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 246, 252);
+}
+.content-satu{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.content-satu h3{
+  margin-top: 10px;
+}
+.content-satu h5{
+  color:rgb(13, 107, 230);
+  text-shadow: 1px 1px 0 rgba(53, 53, 65, 0.9);
+}
+.content-satu p{
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+  width: 77%;
+}
+.content-dua{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.content-dua .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 3;
+  justify-content: center;
+}
+.content-dua .card .img{
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  background-image: url(img/Portofolio.png);
+  box-shadow: 0 0 5px 2px rgba(29, 28, 28,.3);
+  background-size: cover;
+  overflow: hidden;
+}
+.content-dua .card .img img{
+  width: 600px;
+  height: 300px;
+}
+.content-dua .card h4{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(53, 50, 50);
+}
+.content-dua .card p{
+  width: 87%;
+  margin-bottom: 30px;
+}
+.content-contacs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+  align-items: center;
+}
+.content-contacs h6{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color:rgb(13, 107, 230);
+  text-shadow: 1px 1px 0 rgba(53, 53, 65, 0.9);
+}
+.content-contacs p{
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: rgb(105, 100, 100);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.isi-contacs-2{
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.isi-contacs-3{
+  margin-left: 17px;
+}
+.isi-contacs-4{
+  margin-left: -47px;
+  margin-top: 15px;
+}
+footer{
+  background-color:rgb(33, 131, 173);
+}
+.isi-footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:40px;
+  color: white;
+  border-bottom: 2px solid  rgb(202, 199, 199);
+}
+.container-satu h4{
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+.container-satu p{
+  font-size: 0.8em;
+}
+.container-dua h5{
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+.container-dua p{
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+.container-tiga h5{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.container-tiga p{
+  margin: 10px 0;
+  font-size: 0.8em;
+}
+.container-tiga p a{
+  color: white;
+}
+.class-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.class-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(240, 237, 237);
+  padding-bottom: 20px;
+  font-size: 0.6em;
+  margin-top: -13px;
+}
+.class-content p span{
+  color: rgb(10, 10, 10);
+  font-weight: bold;
+}
+.class-content p span a{
+  color: rgb(10, 10, 10);
+}
+/* responsive breakpoin*/
+/*ukuran tablet */
+@media screen and (max-width: 768px){
+  nav ul{
+    width: 50%;
+  }
+}
+
+/* ukuran mobile*/
+@media screen and (max-width: 576px){
+  body{
+    overflow-x: hidden;
+  }
+  .menu-toggle{display: flex;}
+  nav{
+    width: 100vw;
+    margin-top: 0;
+  }
+  nav ul{
+    position:fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    transition: all 1s;
+    background-color:rgb(33, 125, 245) ;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  nav ul.slide{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  aside{
+    flex-direction: column;
+    margin-top: -10px;
+    padding-top: 60px;
+  }
+  .Sidebar-satu{
+    padding: 50px;
+  }
+  .Sidebar-dua{
+    margin-left: 30px;
+  }
+  .Sidebar-dua .bg-img{
+    margin-top: 90px;
+    margin-left: 25px;
+  }
+  #content{
+    flex-direction: column;
+  }
+  .Artikel-satu{
+    margin-left: 30px;
+  }
+  .Artikel-dua{
+    margin-left: 30px;
+    margin-top: -50px;
+  }
+  .Artikel-satu p{
+    width: 100%;
+  }
+  .Artikel-dua p{
+    width: 100%;
+  }
+  .content-satu p{
+    width: 90%;
+  }
+  .content-dua .card .img{
+    width: 400px;
+    height: 200px;
+  }
+  .content-dua .card p{
+    width: 70%;
+  }
+  .isi-contacs-2{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+  .isi-contacs-3{
+    margin-left: 19px;
+  }
+  .isi-contacs-4{
+    margin-left: -50px;
+    margin-top: 15px;
+  }
+  .content-contacs p{
+    width: 60%;
+  }
+  .isi-footer{
+    flex-direction: column;
+    align-items: start;
+  }
+  .container-dua h5{
+    margin-top: 30px;
+  }
+}
